@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User details{% endblock %}
+
+{% block body %}
+<h2>Complete details for User {{ user.id }}</h2>
+<table class="table table-borderless">
+  <tbody>
+    <tr>
+      <th scope="row">Firstname:</th>
+      <td>{{ user.firstname }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Lastname:</th>
+      <td>{{ user.lastname }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Date of Birth</th>
+      <td>{{ user.dob }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Created at:</th>
+      <td>{{ user.createdAt }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Update at:</th>
+      <td>{{ user.updatedAt }}</td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<a href="/">Go Back</a>
+{% endblock %}

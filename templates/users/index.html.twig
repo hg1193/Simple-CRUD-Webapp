@@ -3,5 +3,28 @@
 {% block title %}All Users{% endblock %}
 
 {% block body %}
-    <h1>Users</h1>
+    {% if users %}
+    <table id="users" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+          <tr>
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>
+              <a href="/user/{{ user.id }}" class="btn btn-dark">Show</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No users to display</p>
+  {% endif %}
 {% endblock %}
