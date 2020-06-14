@@ -33,6 +33,11 @@ class User
      */
     private $dob;
 
+     /**
+     * @ORM\Column(type="text", length=255)
+     */
+    private $email;
+
     /**
      * @ORM\Column(type="datetime")
      */
@@ -88,6 +93,16 @@ class User
     public function setLastname($lastname)
     {
         $this->lastname = $lastname;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
     }
 
     public function getDob()

@@ -9,8 +9,11 @@
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
     use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\Extension\Core\Type\EmailType;
     use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
     use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
+    use Symfony\Component\Validator\Constraints as Assert;
 
 
     class UserController extends AbstractController {
@@ -35,6 +38,8 @@
                 ->add('firstname', TextType::class, array('attr' => 
                 array('class' => 'form-control col-md-4 mb-3')))
                 ->add('lastname', TextType::class, array('attr' => 
+                array('class' => 'form-control col-md-4 mb-3')))
+                ->add('email', EmailType::class, array('attr' => 
                 array('class' => 'form-control col-md-4 mb-3')))
                 ->add('dob', BirthdayType::class, array('label' => 'Date of Birth'))
                 ->add('save', SubmitType::class, array(
@@ -69,6 +74,8 @@
                 ->add('firstname', TextType::class, array('attr' => 
                 array('class' => 'form-control col-md-4 mb-3')))
                 ->add('lastname', TextType::class, array('attr' => 
+                array('class' => 'form-control col-md-4 mb-3')))
+                ->add('email', EmailType::class, array('attr' => 
                 array('class' => 'form-control col-md-4 mb-3')))
                 ->add('dob', BirthdayType::class, array('label' => 'Date of Birth'))
                 ->add('save', SubmitType::class, array(
