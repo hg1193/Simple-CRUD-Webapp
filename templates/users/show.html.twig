@@ -3,8 +3,8 @@
 {% block title %}User details{% endblock %}
 
 {% block body %}
-<h2>Complete details for User {{ user.id }}</h2>
-<table class="table table-borderless">
+<h2>Complete details for user id: {{ user.id }}</h2>
+<table class="table table-borderless col-md-6 mt-3">
   <tbody>
     <tr>
       <th scope="row">Firstname:</th>
@@ -16,15 +16,15 @@
     </tr>
     <tr>
       <th scope="row">Date of Birth</th>
-      <td>{{ user.dob }}</td>
+      <td>{{ user.dob|date('d-m-Y') }}</td>
     </tr>
     <tr>
       <th scope="row">Created at:</th>
-      <td>{{ user.createdAt }}</td>
+      <td>{{ user.createdAt|date('d-m-Y H:i:s') }}</td>
     </tr>
     <tr>
       <th scope="row">Update at:</th>
-      <td>{{ user.updatedAt }}</td>
+      <td>{{ user.updatedAt|date('d-m-Y H:i:s') }}</td>
     </tr>
   </tbody>
 </table>
